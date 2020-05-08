@@ -1,7 +1,5 @@
 <template>
   <div id="bookid">
-    <h1>BookChart</h1>
-
     <div class="accordion" id="accordion_design">
       <div class="card" v-for="book in books">
         <div class="card-header" id="heading">
@@ -21,6 +19,8 @@
             <p>{{ bookInfo.publisher }}</p>
             <h4>ジャンル</h4>
             <p>{{ bookInfo.genre }}</p>
+            <router-link :to="{ path: `/edit/${bookInfo.id}` }" class="btn btn-primary">本の編集</router-link>
+            <button class="btn btn-danger" v-on:click="deleteBook(bookInfo.id)">削除</button>
           </div>
         </div>
       </div>
@@ -58,6 +58,14 @@
           this.bookInfo = res.data;
           this.bookInfoBool = true;
         });
+      },
+      deleteBook(id){
+        axios.delete(`/api/books/${id}`).then(res => {
+          this.book = [];
+          this.bookInfo = '';
+          this.bookInfoBool = false;
+          this.fetchBooks();
+        })
       }
     }
   }

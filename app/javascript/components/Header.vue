@@ -1,15 +1,13 @@
 <template>
-  <div>
-    <nav>
-      <div class="nav-wrapper">
-        <router-link to="/" class="brand-logo">Bookshelf</router-link>
-        <ul id="nav-mobile" class="right">
-          <li>
-            <router-link to="">本の登録</router-link>
-          </li>
-        </ul>
-      </div>
-    </nav>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <router-link to="/" class="nav-link">本一覧</router-link>
+      </li>
+      <li class="nav-item">
+        <router-link to="/create" class="nav-link">本の登録</router-link>
+      </li>
+    </ul>
   </div>
 </template>
 
