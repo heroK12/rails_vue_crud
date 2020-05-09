@@ -1,3 +1,5 @@
+![Gif](https://camo.githubusercontent.com/94377f87dcbc0d41f18c65b7c32b8fb6abff1fa7/68747470733a2f2f692e696d6775722e636f6d2f774d31356642492e676966)
+
 
 ## 説明
 Rails 6.0 + Vue.js でCRUD機能実装
